@@ -64,6 +64,9 @@ const reservedNewlineWords = [
     "ELSE",
     "INNER JOIN",
     "JOIN",
+    /** ylji add 支持full ↓*/
+    "FULL JOIN",
+    /** ylji add 支持full ↑*/
     "LEFT JOIN", "LEFT OUTER JOIN",
     "OR", "OUTER APPLY", "OUTER JOIN",
     "RIGHT JOIN", "RIGHT OUTER JOIN",
@@ -100,7 +103,7 @@ export default class StandardSqlFormatter {
                 namedPlaceholderTypes: ["@", ":"],
                 lineCommentTypes: ["#", "--"],
                 /** ylji add 支持中文 ↓*/
-                specialWordChars: ["\\u4e00-\\u9fa5"]
+                specialWordChars: ["\\u4e00-\\u9fa5", "{{", "}}"]
                 /** ylji add 支持中文 ↑*/
             });
         }
